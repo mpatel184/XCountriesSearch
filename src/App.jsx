@@ -37,20 +37,20 @@ function App() {
         />
       </div>
 
-      <div className="flex flex-wrap gap-4 justify-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
         {filteredCountries.map((country, index) => {
           const { common, png } = country;
           return (
             <div
               key={index}
-              className="countryCard p-4 border border-gray-300 rounded-lg shadow-md flex flex-col items-center text-center w-[200px] h-[200px] bg-white"
+              className="countryCard p-4 border border-gray-300 rounded-lg shadow-md flex flex-col items-center text-center bg-white"
             >
               <img
                 src={png}
                 alt={common}
                 className="w-24 h-16 object-cover mb-2 border rounded-md"
               />
-              <h2 className="text-lg font-semibold">{common}</h2>
+              <h2 className="text-lg">{common}</h2>
             </div>
           );
         })}
